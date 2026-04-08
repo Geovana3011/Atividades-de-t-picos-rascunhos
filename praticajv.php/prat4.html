@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+
+    <title>Média</title>
+</head>
+<body>
+
+<button onclick="calcularMedia()">Calcular Média</button>
+
+<script>
+function calcularMedia() {
+    let n1 = Number(prompt("Digite a primeira nota:"));
+    let n2 = Number(prompt("Digite a segunda nota:"));
+
+    let media = (n1 + n2) / 2;
+
+    if (media >= 7) {
+        alert("Aprovado 😄 Média: " + media);
+    } else if (media >= 1.7) {
+        alert("Recuperação 😐 Média: " + media);
+    } else {
+        alert("Reprovado 😢 Média: " + media);
+    }
+}
+</script>
+
+</body>
+</html>

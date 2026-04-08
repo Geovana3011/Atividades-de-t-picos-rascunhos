@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade prática 1</title>
+</head>
+<body>
+
+<h1>Título</h1>
+
+<h1 id="texto">Texto original</h1>
+
+<button onclick="document.getElementById('texto').innerHTML='Novo texto'">
+    Mudar texto
+</button>
+
+<br><br>
+
+<button onclick="document.body.style.backgroundColor='pink'">Rosa</button>
+<button onclick="document.body.style.backgroundColor='violet'">Violeta</button>
+<button onclick="document.body.style.backgroundColor='DodgerBlue'">Azul</button>
+
+<br><br>
+
+<button onclick="saudacao()">Boas-vindas</button>
+
+<script>
+function saudacao() {
+    alert("Bem-vindo(a) 😄");
+}
+</script>
+
+</body>
+</html>

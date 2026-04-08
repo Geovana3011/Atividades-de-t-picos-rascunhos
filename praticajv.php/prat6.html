@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+
+    <meta charset="UTF-8">
+    <title>Temperatura e Estação</title>
+</head>
+<body>
+
+<h2 id="estacao"></h2>
+<img id="img" width="200">
+
+<br><br>
+
+<button onclick="verTudo()">Ver Informações</button>
+
+<script>
+function verTudo() {
+
+    let c = Number(prompt("Digite a temperatura em Celsius:"));
+    let dia = Number(prompt("Digite o dia:"));
+    let mes = Number(prompt("Digite o mês (número):"));
+
+    let f = (c * 9/5) + 32;
+
+    alert("Celsius: " + c);
+    alert("Fahrenheit: " + f);
+
+    // COR
+    if (c >= -5 && c <= 15) {
+        document.body.style.backgroundColor = "LightSkyBlue";
+    } 
+    else if (c >= 16 && c <= 25) {
+        document.body.style.backgroundColor = "Peru";
+    } 
+    else if (c >= 26) {
+        document.body.style.backgroundColor = "LightSkyBlue";
+    }
+
+    // ESTAÇÃO
+    let estacao = "";
+
+    if ((mes == 12 && dia >= 21) || (mes == 1) || (mes == 2) || (mes == 3 && dia <= 20)) {
+        estacao = "Verão";
+        document.getElementById("img").src = "verão.jpg";
+    } 
+    else if ((mes == 3 && dia >= 21) || (mes == 4) || (mes == 5) || (mes == 6 && dia <= 20)) {
+        estacao = "Outono";
+        document.getElementById("img").src = "outono.jpg";
+    } 
+    else if ((mes == 6 && dia >= 21) || (mes == 7) || (mes == 8) || (mes == 9 && dia <= 22)) {
+        estacao = "Inverno";
+        document.getElementById("img").src = "inverno.jpg";
+    } 
+    else {
+        estacao = "Primavera";
+        document.getElementById("img").src = "primavera.jpg";
+    }
+
+    document.getElementById("estacao").innerHTML = "Estação: " + estacao;
+}
+</script>
+
+</body>
+</html>

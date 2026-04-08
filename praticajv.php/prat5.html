@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+
+    <meta charset="UTF-8">
+    <title>Temperatura</title>
+</head>
+<body>
+
+<button onclick="verTemperatura()">Ver Temperatura</button>
+
+<script>
+function verTemperatura() {
+
+    let c = Number(prompt("Digite a temperatura em Celsius:"));
+
+    let f = (c * 9/5) + 32;
+
+    alert("Celsius: " + c);
+    alert("Fahrenheit: " + f);
+
+    if (c >= -5 && c <= 15) {
+        document.body.style.backgroundColor = "blue";
+    } 
+    else if (c >= 16 && c <= 25) {
+        document.body.style.backgroundColor = "green";
+    } 
+    else if (c >= 26) {
+        document.body.style.backgroundColor = "red";
+    }
+}
+</script>
+
+</body>
+</html>
